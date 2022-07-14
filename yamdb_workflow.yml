@@ -44,7 +44,7 @@ jobs:
           with:
             context: ./api_yamdb/
             push: true
-            tags: andriano812/main:good
+            tags: yaroslavandreev/api_yamdb:latest
 
   deploy:
     runs-on: ubuntu-latest
