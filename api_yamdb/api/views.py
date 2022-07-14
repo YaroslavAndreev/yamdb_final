@@ -12,8 +12,8 @@ from rest_framework.permissions import SAFE_METHODS
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 
-from reviews.models import Category, Genre, Review, Title
 from api_yamdb.settings import EMAIL_AUTH
+from reviews.models import Category, Genre, Review, Title
 
 from .filters import TitleFilter
 from .mixins import ListCreateDestroyViewSet
@@ -85,7 +85,7 @@ class UserViewSet(viewsets.ModelViewSet):
             serializer.is_valid(raise_exception=True)
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
-
+        return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
 
 class TitleViewSet(viewsets.ModelViewSet):
     queryset = Title.objects.all().annotate(
