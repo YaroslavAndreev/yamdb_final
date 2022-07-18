@@ -65,7 +65,7 @@ DB_PORT=5432 # порт для подключения к БД
 `sudo docker-compose exec web bash
 `
 
-Документация по проекту Yamdb_final: http://84.252.139.137:8000/redoc/
+Документация по проекту Yamdb_final: http://51.250.24.55:8080/redoc/
 
 ![example workflow](https://github.com/YaroslavAndreev/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
